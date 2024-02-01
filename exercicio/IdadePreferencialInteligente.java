@@ -1,4 +1,6 @@
-public class IdadePreferencial {
+package lp2.lab01;
+
+public class IdadePreferencialInteligente {
     public static void main(String[] args) {  // Definindo uma função
         int idade = 20;
         if (idade >= 60) {
