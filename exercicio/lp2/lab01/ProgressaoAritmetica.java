@@ -24,14 +24,18 @@ public class ProgressaoAritmetica {
 
                 System.out.print(termoInicial);
 
-                while (condicao < totalTermos - 1) {
-                        termoAtual = termoInicial + razao;
+		termoAtual = termoInicial;
 
-                        System.out.println(" " + termoAtual);
+                while (condicao < totalTermos - 1) {
+                        termoAtual +=  razao;
+
+                        System.out.print(" " + termoAtual);
 
                         condicao += 1;
 
                 }
+
+		System.out.println();
 
                 sc.close();
 
