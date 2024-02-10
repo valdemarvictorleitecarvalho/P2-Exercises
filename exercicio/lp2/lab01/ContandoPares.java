@@ -14,13 +14,27 @@ public class ContandoPares {
 		int somaPares = 0;
 
 		String numeros = sc.nextLine();
-		String[] numerosRepartidos = numeros.split(" ");
 
-		for (int i = 0; i < numerosRepartidos.length; i++) {
-			if (Integer.parseInt(numerosRepartidos[i]) % 2 == 0) {
-				somaPares += 1;
-			}
-		}
+        if (numeros.contains(" ")) {
+		    String[] numerosRepartidos = numeros.split(" ");
+        
+            for (int i = 0; i < numerosRepartidos.length; i++) {
+			    if (Integer.parseInt(numerosRepartidos[i]) % 2 == 0) {
+				    somaPares += 1;
+			    }
+		    }
+        }
+        else {
+            try {
+                if (Integer.parseInt(numeros) % 2 == 0) {
+                    somaPares = 1;
+                }
+            }
+            catch (NumberFormatException e) {
+                System.out.println(somaPares);
+                return;
+            }
+        }
 
 		System.out.println(somaPares);
 		
