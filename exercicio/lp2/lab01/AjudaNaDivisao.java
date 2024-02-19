@@ -5,11 +5,13 @@
  */
 
 import java.util.Scanner;
+import java.util.Locale;
 
 public class AjudaNaDivisao {
 	public static void main(String[] args) {
-			    
-		Scanner sc = new Scanner(System.in);
+	
+	Locale.setDefault(Locale.US);		
+	Scanner sc = new Scanner(System.in);
         
         int dividendo = sc.nextInt();
         int divisor = sc.nextInt();
